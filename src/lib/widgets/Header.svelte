@@ -23,7 +23,7 @@
 				<div class="navbar-right">
 					<nav class="navbar-menu">
             {#each boardgamesList as boardgame}
-						<a href="{boardgame.anchor}" class="navbar-menu-item-link w-inline-block">
+						<a href="#{boardgame.anchor}" class="navbar-menu-item-link w-inline-block">
               {boardgame.title}
 							<!-- <div class="navbar-menu-item-inner">
 								<div></div>
@@ -69,9 +69,9 @@
 						</a>
                         {#each boardgamesList as boardgame}
 
-						<a href="#{boardgame.href}" class="mobile-menu-nav-link w-inline-block">
-							<div class="mobile-menu-nav-text">{boardgame.title}</div>
-						</a>
+							<a href="#{boardgame.anchor}" class="mobile-menu-nav-link w-inline-block">
+								<div class="mobile-menu-nav-text">{boardgame.title}</div>
+							</a>
 						{/each}
 
 						<a href="https://oleg-darkdev.vercel.app/" class="button secondary w-inline-block">
