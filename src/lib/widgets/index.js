@@ -1,11 +1,12 @@
-import BoardgameSection from './ui/landing/BoardgameSection.svelte';
-import Hero from './ui/landing/Hero.svelte';
-import SupportUs from './ui/landing/SupportUs.svelte';
-import Footer from './ui/landing/Footer.svelte';
-import AntiSystems from './ui/landing/AntiSystems.svelte';
-import OurClients from './ui/landing/OurClients.svelte';
-import Aside from './ui/landing/Aside.svelte';
-import AnimaterdLogo from './ui/landing/AnimaterdLogo.svelte';
+import Header from './Header.svelte';
+import Hero from './Hero.svelte';
+import Features from './Features.svelte';
+import BoardgamesLogos from './BoardgamesLogos.svelte';
+import BoardgamesList from './BoardgamesList.svelte';
+import Footer from './Footer.svelte';
+import FooterTags from './FooterTags.svelte';
+import Stats from './Stats.svelte';
 
 
-export { BoardgameSection, Hero, Aside, AntiSystems, SupportUs, AnimaterdLogo, OurClients, Footer };
+
+export { Header, Hero, Features, BoardgamesLogos, BoardgamesList, Footer, FooterTags, Stats };

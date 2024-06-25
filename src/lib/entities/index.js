@@ -1,6 +1,13 @@
-import FactSheet from './ui/landing/FactSheet.svelte';
-import Carousel from './ui/landing/Carousel.svelte';
-import Price from './ui/landing/Price.svelte';
-import Menu from './ui/landing/Menu.svelte';
+import FeatureCard from './FeatureCard.svelte';
+import BoardgameCard from './FeatureCard.svelte';
+import CountriesCard from './CountriesCard.svelte';
+import OtherBoardgameCard from './OtherBoardgameCard.svelte';
 
-export { FactSheet, Carousel,  Menu, Price };
+    
+
+export {
+    FeatureCard,
+    BoardgameCard,
+    CountriesCard,
+    OtherBoardgameCard
+};

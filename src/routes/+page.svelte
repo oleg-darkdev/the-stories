@@ -1,275 +1,144 @@
 <script>
-	import { antISystems, social, historical, menu, emptyBoardgame } from '$lib/shared';
-	import { BoardgameSection, Aside, AnimaterdLogo } from '$lib/widgets';
-  import { Menu } from '$lib/entities'
-	const boardgames = [].concat(antISystems, social, historical);
-
-  $: selectedBoardgame = emptyBoardgame;
-  $: selectedMenu = menu[0];
-
-	let showMenu = false;
+  // Hero, Footer, Aside 
+  import {
+    Header,
+    Hero,
+    Features,
+    BoardgamesList,
+    BoardgamesLogos,
+    Footer,
+    FooterTags,
+    Stats
+  } from '$widgets';
+  import { CountriesCard } from '$entities';
+  import { coutriesList } from '$shared';
+  
 </script>
-
-
 <svelte:head>
-  <title>44Games - shop 🎲</title>
+  <title>THE Stories</title>
 </svelte:head>
 
-<header class="bg-neitral-200 h-screen w-full">
-  <Aside bind:selectedBoardgame bind:showMenu bind:selectedMenu />
-		{#if !showMenu}
-      <AnimaterdLogo />
-	{:else}
-		<div class=" grid grid-cols-2  ">
-			<article class='wrap py-6  px-2  {selectedBoardgame.id ? selectedBoardgame.bgImage : 'menu '}'>
-				<section class='pl-24 pr-4'>
-          <!-- class='hidden' -->
-          {#if selectedMenu.id == 1}
-<div class="card w-full h-[94vh]" data-aos="flip-up"
-		data-aos-delay="80"
-		data-aos-duration="800"
-		data-aos-once="false"
-		data-aos-mirror="true">
+<div class="page-wrapper">
+  <main class="main-wrapper">
+    <Header />
+    <Hero />
+    <Stats />
+    <!-- <BoardgamesLogos />         -->
+    <Features />
+    <section class="section-marquee">
+      <div class="line"></div>
+      <div class="marquee-inner">
+        <div class="marquee-heading text-outline  text-[#de7c29]">·</div>
+        <div class="marquee-heading">#ARCHAEO</div>
+        <div class="marquee-heading text-outline  text-[#de7c29]">·</div>
+        <div class="marquee-heading text-outline">#PALEO</div>
+        <div class="marquee-heading text-outline text-[#de7c29]">·</div>
+        <div class="marquee-heading">#CASTLES</div>
+        <div class="marquee-heading text-outline  text-[#de7c29]">·</div>
+        <div class="marquee-heading text-outline">#HERITAGE</div>
+        <div class="marquee-heading text-outline  text-[#de7c29]">·</div>
+      </div>
+    </section>
+    <BoardgamesList />
+    <section class="section-cta-contact">
+      <FooterTags />
+      <div class="page-padding">
+        <div class="padding-vertical padding-xhuge">
+          <div class="text-align-center">
+           
 
-    <div class="flex pl-16 pt-10 pr-4 flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-            <div class="w-full mx-auto">
-                <h1>About 44Games</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
-                <p>
-                  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- <div class="margin-bottom margin-small">
+              <div>
+                <img src="/images/minil-logo.svg" loading="lazy" alt="favicon images" class='h-20' />
+              </div>
+            </div> -->
+            <div class="margin-bottom margin-medium">
+              <div>
+                <div class="heading-medium text-uppercase">Let's add </div>
+              </div>
+              <div>
+                <div class="heading-medium text-uppercase">Your country</div>
+              </div>
             </div>
-        </div>
-<!-- <h2 class='relative left-20 top-10 text-4xl font-black'> About </h2>
-<p class="text-md">
-  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-</p> -->
-        </div>
-					{:else if selectedMenu.id == 2}
-          <div class="card overflow-x-hidden w-full h-[90vh]" data-aos="flip-up"
-		data-aos-delay="80"
-		data-aos-duration="800"
-		data-aos-once="false"
-		data-aos-mirror="true">
-            <BoardgameSection  bind:boardgame={selectedBoardgame} />
-
+            <div class=''>
+							<a href="https://oleg-darkdev.vercel.app/" target='_blank' class="button secondary w-inline-block">
+              <div class="button-inner">
+                <div class="button-line-left"></div>
+                <div class="button-inner-text">Get in touch</div> 
+                <div class="button-line-right"></div>
+              </div>
+              </a>
             </div>
-					{:else if selectedMenu.id == 3}
-<div class="card w-full h-[90vh]" data-aos="flip-up"
-		data-aos-delay="80"
-		data-aos-duration="800"
-		data-aos-once="false"
-		data-aos-mirror="true">
-<div class="flex pl-16 pt-10 pr-4 flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-            <div class="w-full mx-auto">
-                <h1>Offer BTB</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
-                <p>
-                  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="mt-16 mx-auto max-w-2xl">
+            <div class=" margin-xsmall">
+                <div class="home-services-item-heading">
+                    <h2 class="text-center heading-h3 text-uppercase">Currently available</h2>
+                </div>
             </div>
+             <div class='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  mx-auto max-w-2xl items-start justify-between content-start'>
+            {#each coutriesList as countryData}
+              <CountriesCard {countryData}/>
+            {/each}
+          </div>
+          </div>
+          </div>
         </div>
-        </div>
-          {:else if selectedMenu.id == 4}
-<div class="card w-full h-[90vh]" data-aos="flip-up"
-		data-aos-delay="80"
-		data-aos-duration="800"
-		data-aos-once="false"
-		data-aos-mirror="true">
-<div class="flex pl-16 pt-10 pr-4 flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-            <div class="w-full mx-auto">
-                <h1>Offer BTC</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
-                <p>
-                  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-        </div>
-
-        {:else if selectedMenu.id == 5}
-<div class="card w-full h-[90vh]" data-aos="flip-up"
-		data-aos-delay="80"
-		data-aos-duration="800"
-		data-aos-once="false"
-		data-aos-mirror="true">
-<div class="flex pl-16 pt-10 pr-4 flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
-            <div class="w-full mx-auto">
-                <h1>CONTACT</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h2>
-                <p>
-                  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-
-                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-            </div>
-        </div>
-        </div>
-
-          {/if}
-				</section>
-			</article>
-			<nav class="">
-				<div class=" h-full max-h-screen py-10 pr-40">
-          <Menu bind:selectedMenu bind:selectedBoardgame/>
-        </div>
-			</nav>
-
-		</div>
-	{/if}
-</header>
-
-
-
-<!-- <script>
-	import { antISystems, social, historical } from '$lib/shared';
-	import { BoardgameSection, Hero, Footer, AntiSystems, SupportUs, OurClients } from '$lib/widgets';
-</script>
-
-
-<a name='about'> </a>
-<a name='projects'> </a>
-<a name='faq'> </a>
-<a name='contact'> </a>
-
-<Hero />
-
-<OurClients />
-
-<AntiSystems />
-
-
-{#each antISystems as boardgame}
-	<BoardgameSection {boardgame} />
-{/each}
-
-<div class="h-screen w-full">
-
+      </div>
+    </section>
+    <Footer />
+  </main>
 </div>
-
-{#each social as boardgame}
-	<BoardgameSection {boardgame} />
-{/each}
-
-<SupportUs />
-
-<div class="h-screen w-full">
-
-</div>
-{#each historical as boardgame}
-	<BoardgameSection {boardgame} />
-{/each}
-
-<Footer />
- -->
-
 
 
 <style>
-
-
-  .card {
-    background: rgba(12, 10, 9, 0.6);
-
-		border: none;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+  /* Make text look crisper and more legible in all browsers */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-.hidden {
-  display: none;
-}
-  .glass {
-		background: rgba(12, 10, 9, 0.6);
-		overflow: hidden;
-		border: none;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-	}
 
-  .wrap {
-		height: auto;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-attachment: fixed;
-	}
+  /* Get rid of top margin on first element in any rich text element */
+  .w-richtext> :not(div):first-child,
+  .w-richtext>div:first-child> :first-child {
+    margin-top: 0 !important;
+  }
 
-.menu {
-  background-image: url(/images/menu.svg);
-  height: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-}
-	@media (min-width: 1024px) {
+  /* Get rid of bottom margin on last element in any rich text element */
+  .w-richtext>:last-child,
+  .w-richtext ol li:last-child,
+  .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+  }
 
-		.a-bg {
-			background-image: url(/images/games/a-bg.svg);
-		}
+  /* Prevent all click and hover interaction with an element */
+  .pointer-events-off {
+    pointer-events: none;
+  }
 
-		.eco-bg {
-			background-image: url(/images/games/eco-bg.svg);
-		}
+  /* Enables all click and hover interaction with an element */
+  .pointer-events-on {
+    pointer-events: auto;
+  }
 
-		.ror-bg {
-			background-image: url(/images/games/ror-bg.png);
-		}
-
-		.fnb-bg {
-			background-image: url(/images/games/fnb-bg.svg);
-		}
-
-		.graffity-bg {
-			background-image: url(/images/games/graffity-bg.svg);
-		}
-
-		.locators-bg {
-			background-image: url(/images/games/fnb-bg.svg);
-		}
-
-		.squat-bg {
-			background-image: url(/images/games/squat-bg.svg);
-		}
-
-		.mks-bg {
-			background-image: url(/images/games/mks-bg.png);
-		}
-
-		.lgbt-bg {
-			background-image: url(/images/games/lgbt-bg.svg);
-		}
-		.cov-bg {
-			background-image: url(/images/games/cov-bg.svg);
-		}
-
-		.gulag-bg {
-			background-image: url(/images/games/gulag-bg.svg);
-		}
-
-		.yakudza-bg {
-			background-image: url(/images/games/yakudza-bg.svg);
-		}
-
-		.by_pl-bg {
-			background-image: url(/images/games/by-pl-bg.svg);
-		}
-		/*
-    .squat-bg {
-			background-image: url(/images/games/squat-bg.svg);
-		} */
-	}
-	@media (min-device-width: 320px) and (max-device-width: 1024px) {
-
-		.a-bg {
-			background-color: #000;
-		}
-	}
-
-	@media (max-width: 560px) {
-
-	}
-	@media (min-width: 560px) {
-
-	}
+  /* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+  a,
+  .w-input,
+  .w-select,
+  .w-tab-link,
+  .w-nav-link,
+  .w-dropdown-btn,
+  .w-dropdown-toggle,
+  .w-dropdown-link {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+  }
 </style>
