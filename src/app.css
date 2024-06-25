@@ -5466,7 +5466,7 @@ figcaption {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-
+}
 @font-face {
   font-family: "Clash Display";
   src: url("https://assets.website-files.com/6397824bd2c756220d7e63e9/639786e96369d61be300b15e_ClashDisplay-Semibold.woff")
