@@ -8,6 +8,7 @@
     BoardgamesLogos,
     Footer,
     FooterTags,
+    Faq,
     Stats
   } from '$widgets';
   import { CountriesCard } from '$entities';
@@ -40,6 +41,9 @@
       </div>
     </section>
     <BoardgamesList />
+
+    <!-- <Faq /> -->
+    
     <section class="section-cta-contact">
       <FooterTags />
       <div class="page-padding">
