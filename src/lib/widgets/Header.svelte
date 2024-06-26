@@ -1,6 +1,7 @@
 <script>
 	import { boardgamesList } from '$shared';
 
+	let showMenu = false;
 </script>
 
 
@@ -22,6 +23,10 @@
 				</div> -->
 				<div class="navbar-right">
 					<nav class="navbar-menu">
+						<a href="#api" class="navbar-menu-item-link w-inline-block">
+							API
+						</a>
+
             {#each boardgamesList as boardgame}
 						<a href="#{boardgame.anchor}" class="navbar-menu-item-link w-inline-block">
               {boardgame.title}
@@ -32,6 +37,7 @@
 						</a>
             {/each}
 						
+
 					</nav>
 					<div class="navbar-right-button">
 						<a
@@ -46,7 +52,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="mobile-menu-toggle">
+					<div class="mobile-menu-toggle" on:click={()=> showMenu = !showMenu}>
 						<div class="mobile-menu-toggle-line _01" />
 						<div class="mobile-menu-toggle-line _02" />
 						<div class="mobile-menu-toggle-line _03" />
@@ -55,18 +61,14 @@
 			</header>
 		</div>
 	</div>
-	<div class="mobile-menu">
+	<div class:hidden={showMenu} class="mobile-menu">
 		<div class="page-padding">
 			<div class="container-xxlarge">
 				<div class="mobile-menu-wrapper">
 					<div class="mobile-menu-nav">
-						<a
-							href="/"
-							aria-current="page"
-							class="mobile-menu-nav-link w-inline-block w--current"
-						>
-							<div class="mobile-menu-nav-text">Home</div>
-						</a>
+							<a href="#api" class="mobile-menu-nav-link w-inline-block">
+								<div class="mobile-menu-nav-text">API</div>
+							</a>
                         {#each boardgamesList as boardgame}
 
 							<a href="#{boardgame.anchor}" class="mobile-menu-nav-link w-inline-block">
