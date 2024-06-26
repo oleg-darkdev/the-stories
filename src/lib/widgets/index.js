@@ -6,7 +6,8 @@ import BoardgamesList from './BoardgamesList.svelte';
 import Footer from './Footer.svelte';
 import FooterTags from './FooterTags.svelte';
 import Stats from './Stats.svelte';
+import Faq from './Faq.svelte';
 
 
 
-export { Header, Hero, Features, BoardgamesLogos, BoardgamesList, Footer, FooterTags, Stats };
+export { Header, Hero, Features, BoardgamesLogos, BoardgamesList, Footer, FooterTags, Faq, Stats };
