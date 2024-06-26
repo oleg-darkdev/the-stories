@@ -5,6 +5,29 @@
   import {
     features
   } from '$shared';
+
+
+const apiList = [
+  {
+    title: '/api/the-archaeo',
+    link: '/api/the-archaeo'
+  },
+  {
+    title: '/api/the-paleo',
+    link: '/api/the-paleo'
+  },
+  {
+    title: '/api/the-castles',
+    link: '/api/the-castles'
+  },
+  {
+    title: '/api/the-heritage',
+    link: '/api/the-heritage'
+  },
+]
+  // const apiFeature = 	{
+	// };
+
 </script>
 <section class="section-home-services">
   <div class="page-padding">
@@ -20,7 +43,7 @@
 									alt=""
 								/></div> -->
               <div class="max-width-medium">
-                <div class="lg:heading-h1 heading-h2 text-uppercase"> Boardgames </div>
+                <div class="lg:heading-h1 heading-h2 text-uppercase"> THE Stories </div>
                 <div class="heading-h1 text-uppercase"> Features </div>
               </div>
             </div>
@@ -55,10 +78,45 @@
           </div>
           <div class="home-services-grid-right -mt-14 lg:-mt-0">
             <div class="home-services-grid-right-inner">
-              {#each features as feature}								
+              <div
+                  class="home-services-card-wrapper"
+              >
+                  <div class="muted card">
+                      <div class="card-padding ">
+                          <div class="margin-bottom margin-xsmall">
+                              <div class="home-services-item-heading">
+                                  <img
+                                      src="/images/minil-logo.svg"
+                                      loading="lazy"
+                                      width="40"
+                                      alt=""
+                                  />
+                                  <h2 class="heading-h3 text-uppercase">Public API</h2>
+                              </div>
+                          </div>
+                          <a name="api" />
+                          <div class="text-size-medium mb-6">
+                               The API should provide functionality that will allow to efficiently manage and analyze a variety of data obtained during the research of archaeological and paleontological excavations, castles and fortifications, cities included in the list of unesco analysis of cultural heritage used in educational historical board games.
+                          </div>
+
+
+                            {#each apiList as api}
+                                  <a href='{api.link}' target="_blank" class=" w-full ">
+
+                                    <div class="bg-[#713f13] px-6 py-3 h-10   my-2  marquee-secondary-text text-[#de7c29]">
+                                            {api.title}
+                                      </div>
+                                  </a>
+
+                              {/each}
+
+                      </div>
+                  </div>
+              </div>
+              {#each features as feature}
 							<FeatureCard {feature}/>
 							{/each}
-						
+
 						</div>
             <div class="mt-10 flex flex-row flex-wrap lg:hidden">
               <div class='flex flex-row flex-wrap'>
@@ -96,7 +154,7 @@
 </section>
 <style>
 
-  
+
 
 @media (max-width: 640px) {
   .top-author-block {
