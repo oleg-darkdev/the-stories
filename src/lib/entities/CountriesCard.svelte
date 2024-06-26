@@ -7,7 +7,7 @@
         <div class="card-padding">
             <div class="margin-bottom margin-xsmall">
                 <div class="home-services-item-heading">
-                    <h2 class="text-left heading-h5 text-[#de7c29] text-uppercase">{countryData.title} countries</h2>
+                    <h2 class="text-left heading-h5 text-[#de7c29]  text-uppercase">{countryData.title} countries</h2>
                 </div>
             </div>
             {#if countryData.countries.length == 0}
@@ -32,7 +32,7 @@
                         class='h-6 mr-3 '
                     />
 
-                <p class="text-size-large text-[#713f13]">
+                <p class="text-size-large text-meta text-[#713f13]">
                     {country}
                 </p>
                             </div>

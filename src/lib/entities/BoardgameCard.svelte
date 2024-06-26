@@ -10,11 +10,13 @@
         <a href="{boardgame.link}" class="home-work-link w-inline-block">                            </a>
 
         <img src="{boardgame.img}" loading="lazy" alt="{boardgame.title}"  class="image-cover-link" />
-        <!-- <div class="home-project-button-wrapper">
+
+        <!-- hover:display display-none -->
+        <div class="">
             <div class="view-button">
                 <div class="view-button-text">View</div>
             </div>
-        </div> -->
+        </div>
         </div>
     </div>
     <div class="margin-bottom margin-tiny">

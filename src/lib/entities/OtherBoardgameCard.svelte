@@ -1,5 +1,9 @@
 <script>
+    import {
+    otherBoardgames
+  } from '$shared';
 
+  
 </script>
 
 <div class="bg-[#b91c1c] card lg:w-[720px] xl:w-[900px] lg:h-72">
@@ -26,11 +30,11 @@
             alt=""
         /> -->
         <div class="text-meta ">
-          "What unites the peoples of Belarus and Poland" - through the materials prepared as part of this project, you will learn more about the relationship between these two neighboring countries, their history, culture and traditions.
+          {otherBoardgames[0].desc}
         </div>
 
         <div class="w-[180px] mt-6 mx-6 ">
-          <a href="https://by-pl.vercel.app/" target="_blank" class="button--by-pl  w-inline-block">
+          <a href="{otherBoardgames[0].link}" target="_blank" class="button--by-pl  w-inline-block">
             <div class="button-inner">
               <div class="button-line-left "></div>
               <div class="button-inner-text">More</div>
