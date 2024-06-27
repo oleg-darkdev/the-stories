@@ -33,7 +33,13 @@ const boardgamesList = [
 		link: '/',
 		anchor: '#12262-stories',
 		desc: `Explore the Kolskaya ultra-deep borehole, one of the deepest man-made facilities on the planet, drilled to a record depth of 12,262 meters. Discover a symbol of scientific and technical progress that has provided unique data for geological and geophysical research and generated many myths and legends and it's been called "the well to Hell."`
-	}
+	},
+	{
+		title: 'Belarus/Poland-STORIES',
+		img: '/images/boardgames/by-pl-stories.svg',
+		link: 'https://by-pl.vercel.app/',
+		anchor: '#12262-stories',
+		desc: `"Cultures of Belarus and Poland" - through the materials prepared as part of this project, you will learn more about the relationship between these two neighboring countries, their history, culture and traditions.`	}
 ];
 
 
