@@ -33,7 +33,15 @@ const boardgamesList = [
 		link: '/',
 		anchor: '#12262-stories',
 		desc: `Explore the Kolskaya ultra-deep borehole, one of the deepest man-made facilities on the planet, drilled to a record depth of 12,262 meters. Discover a symbol of scientific and technical progress that has provided unique data for geological and geophysical research and generated many myths and legends and it's been called "the well to Hell."`
-	},
+  },	{
+		title: 'pyramid-stories',
+		img: '/images/boardgames/pyramid-stories.svg',
+		link: '/',
+		anchor: '#pyramid-stories',
+		desc: ``
+  },
+
+
 	{
 		title: 'Belarus/Poland-STORIES',
 		img: '/images/boardgames/by-pl-stories.svg',
