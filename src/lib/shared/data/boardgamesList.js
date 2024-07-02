@@ -41,13 +41,13 @@ const boardgamesList = [
 		anchor: '#pyramid-stories',
 		desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.`
 	},
-	{
-		title: 'Belarus/Poland-STORIES',
-		img: '/images/boardgames/by-pl-stories.svg',
-		link: 'https://by-pl.vercel.app/',
-		anchor: '#12262-stories',
-		desc: `"Cultures of Belarus and Poland" - through the materials prepared as part of this project, you will learn more about the relationship between these two neighboring countries, their history, culture and traditions.`
-	}
+	// {
+	// 	title: 'Belarus/Poland-STORIES',
+	// 	img: '/images/boardgames/by-pl-stories.svg',
+	// 	link: 'https://by-pl.vercel.app/',
+	// 	anchor: '#12262-stories',
+	// 	desc: `"Cultures of Belarus and Poland" - through the materials prepared as part of this project, you will learn more about the relationship between these two neighboring countries, their history, culture and traditions.`
+	// }
 ];
 
 
