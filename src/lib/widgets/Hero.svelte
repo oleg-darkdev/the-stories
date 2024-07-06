@@ -7,7 +7,7 @@
                 </div>
               </div>
               <div class="">
-                <h1 class="home-hero-subheading">HISTORICAL EDUCATIONAL BOARDGAMES</h1>
+                <h1 class="home-hero-subheading">HISTORICAL EDUCATIONAL hybrid BOARDGAMES</h1>
               </div>
             </div>
             <div class="padding-top padding-medium">
