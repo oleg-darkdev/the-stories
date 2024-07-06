@@ -1,7 +1,7 @@
 <script>
 	import { boardgamesList } from '$shared';
 
-	let showMenu = false;
+	let showMenu = true;
 </script>
 
 
@@ -36,7 +36,7 @@
 							</div> -->
 						</a>
             {/each}
-						
+
 
 					</nav>
 					<div class="navbar-right-button">
