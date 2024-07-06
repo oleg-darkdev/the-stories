@@ -3,8 +3,7 @@ import features from './data/features.js';
 import stats from './data/stats.js';
 import coutriesList from './data/coutriesList.js';
 import otherBoardgames from './data/otherBoardgames.js';
-import faqList from './data/faqList.js';
-
+import faqList from './data/faq.js';
 
 
 // api
