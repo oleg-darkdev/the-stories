@@ -1,5 +1,5 @@
 <script>
-  // Hero, Footer, Aside 
+  // Hero, Footer, Aside
   import {
     Header,
     Hero,
@@ -13,7 +13,7 @@
   } from '$widgets';
   import { CountriesCard } from '$entities';
   import { coutriesList } from '$shared';
-  
+
 </script>
 <svelte:head>
   <title>THE Stories</title>
@@ -42,14 +42,14 @@
     </section>
     <BoardgamesList />
 
-    <!-- <Faq /> -->
-    
+    <Faq />
+
     <section class="section-cta-contact">
       <FooterTags />
       <div class="page-padding">
         <div class="padding-vertical padding-xhuge">
           <div class="text-align-center">
-           
+
 
             <!-- <div class="margin-bottom margin-small">
               <div>
@@ -68,7 +68,7 @@
 							<a href="https://oleg-darkdev.vercel.app/" target='_blank' class="button secondary w-inline-block">
               <div class="button-inner">
                 <div class="button-line-left"></div>
-                <div class="button-inner-text">Get in touch</div> 
+                <div class="button-inner-text">Get in touch</div>
                 <div class="button-line-right"></div>
               </div>
               </a>
@@ -128,8 +128,8 @@
     pointer-events: auto;
   }
 
-  /* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+  /*
+Make the following elements inherit typography styles from the parent and not have hardcoded values.
 Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
 Uncomment this CSS to use it in the project. Leave this message for future hand-off.
 */
