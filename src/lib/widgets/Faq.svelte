@@ -19,15 +19,22 @@
           <h2  class="text-meta">{faq.q}</h2>
           </div>
       </div> -->
-          <div class='flex flex-row pr-14 pl-14 max-w-[2000px]'>
-
-      <div class="">
-          <div  class=" heading-faq text-uppercase">{faq.q} 
+    <div class='flex flex-row px-14 py-6 max-w-[2000px] cursor-pointer' on:click={()=> faq.showAnswer = !faq.showAnswer}>
+          <div  class=" heading-faq text-uppercase">
+            {faq.q}
           </div>
-      </div>
 
       <span class="h-20 text-6xl text-color-secondary">+</span>
     </div>
+
+    {#if faq.showAnswer}
+      <div class=' px-14 py-6 max-w-[1200px]'>
+        {#each faq.a as answer}
+            <p  class="text-5xl mb-6">{answer}
+            </p>
+          {/each}
+      </div>
+    {/if}
   </div>
 {/each}
 </div>
