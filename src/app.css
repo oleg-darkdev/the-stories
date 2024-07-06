@@ -2856,17 +2856,7 @@ figcaption {
   letter-spacing: 2px;
 }
 
-.heading-faq {
-  font-family: "Clash Display", sans-serif;
-  font-size: 3.5rem;
-  line-height: 110%;
-  font-weight: 500;
-}
-.heading-faq.text-uppercase {
-  line-height: 100%;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
+
 
 .heading-h2 {
   font-family: "Clash Display", sans-serif;
@@ -4560,9 +4550,7 @@ figcaption {
   .heading-small {
     font-size: 4rem;
   }
-  .heading-faq {
-    font-size: 3rem;
-  }
+
   .heading-h2 {
     font-size: 3rem;
   }
@@ -5007,9 +4995,7 @@ figcaption {
   .heading-small {
     font-size: 3.25rem;
   }
-    .heading-faq {
-    font-size: 2.25rem;
-  }
+
   .heading-h2 {
     font-size: 2.5rem;
   }
@@ -5297,9 +5283,7 @@ figcaption {
   .heading-small {
     font-size: 2.5rem;
   }
-    .heading-faq {
-    font-size: 1.25rem;
-  }
+
   .heading-h2 {
     font-size: 2.25rem;
   }
